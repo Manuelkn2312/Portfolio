@@ -1,0 +1,75 @@
+app-header {
+    background-color: #FFFCF3;
+    height: 92px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+app-menu {
+    font-family: 'Syne';
+    font-weight: 700;
+    font-size: 96px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    z-index: 9;
+    background-color: #FFFCF3;
+    top: -100%;
+}
+
+app-footer {
+    display: block;
+    background-color: black;
+    height: 150px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Responsiveness */
+@media screen and (max-width: 1440px) {
+    app-menu {
+        margin-left: -100px;
+        margin-right: -100px;
+    }
+
+    app-footer {
+        margin-left: -100px;
+        margin-right: -100px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    app-menu {
+        margin-left: -25px;
+        margin-right: -25px;
+        gap: 30px;
+    }
+
+    app-footer {
+        margin-left: -25px;
+        margin-right: -25px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}

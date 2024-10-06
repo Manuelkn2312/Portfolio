@@ -1,0 +1,25 @@
+<h2>{{ "portfolio" | translate }}</h2>
+
+<span class="portfolioText" style="margin: 30px 0px">{{ "portfolioText" | translate }}</span>
+
+<div class="portfolioList">
+    <div *ngFor="let project of projects; let i = index" class="project" [ngClass]="{'row-reverse': i % 2 == 1}">
+        <div class="projectImage">
+            <img [src]="project.img">
+            <div class="imageBorder"></div>
+        </div>
+
+        <div class="counter">{{ (i + 1).toString().padStart(2, '0') }}/{{ projects.length | number:'2.0-0' }}</div>
+
+        <div class="projectInfo">
+            <h3>{{ project.name }}</h3>
+            <span style="color: #FF9900">{{ project.usedTech }}</span>
+            <span style="font-size: 16px">{{ project.description | translate }}</span>
+
+            <div class="links">
+                <a [href]="project.gitHubURL" target="_blank">GitHub</a>
+                <a [href]="project.liveTestURL" target="_blank">Live Test</a>
+            </div>
+        </div>
+    </div>
+</div>

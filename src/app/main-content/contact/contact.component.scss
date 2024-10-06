@@ -1,0 +1,114 @@
+.contact {
+    position: relative;
+    height: 800px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #FFFCF3;
+    font-family: "Syne";
+    font-size: 56px;
+    font-weight: 800;
+    margin: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: all ease-in-out 125ms;
+
+    &:hover {
+        color: #00BC8F;
+        transition: all ease-in-out 125ms;
+    }
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    color: #00BC8F;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+h4 {
+    color: #FFFCF3;
+    font-weight: 400;
+    font-size: 23px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+img {
+    position: absolute;
+    right: 0px;
+    bottom: 30px;
+    animation: reverseBounceAnimation 3s infinite;
+}
+
+app-contact-form {
+    max-width: 617px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+@keyframes reverseBounceAnimation {
+    0%,20%,50%,80%,to {
+        transform: translateY(0)
+    }
+
+    40% {
+        transform: translateY(30px)
+    }
+
+    60% {
+        transform: translateY(15px)
+    }
+}
+
+
+/* Responsiveness */
+@media screen and (max-width: 1000px) {
+    h2 {
+        font-size: 50px;
+    }
+
+    h3 {
+        padding-left: 25px;
+        padding-right: 25px;
+        text-align: center;
+    }
+
+    h4 {
+        padding-left: 25px;
+        padding-right: 25px;
+        text-align: center;
+    }
+
+    img {
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h2 {
+        font-size: 45px;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    h2 {
+        display: none;
+    }
+}

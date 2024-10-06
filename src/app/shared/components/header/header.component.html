@@ -1,0 +1,11 @@
+<header>
+    <a href="">
+        <img src="assets/img/logo.png" class="logo">
+    </a>
+
+    <div class="changeLanguageAndMenu">
+        <app-change-language></app-change-language>
+
+        <img class="menuIcon" [src]="this.portfolioService.menuIconSrc" (click)="this.portfolioService.clickFunction()">
+    </div>
+</header>

@@ -1,0 +1,14 @@
+.legalNotice {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding-top: 92px;
+    padding-bottom: 280px;
+}
+
+
+/* Responsiveness */
+@media screen and (max-width: 1600px) {
+    .legalNotice {
+        padding-bottom: 92px;
+    }
+}

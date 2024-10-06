@@ -1,0 +1,56 @@
+header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.logo {
+    height: 60px;
+    width: 130px;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+
+img {
+    width: 75px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.changeLanguageAndMenu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.menuIcon {
+    width: 44px;
+    height: 38px;
+    cursor: pointer;
+}
+
+
+/* Responsiveness */
+@media screen and (max-width: 1440px) {
+    a {
+        margin-left: 100px;
+    }
+
+    .changeLanguageAndMenu {
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    a {
+        margin-left: 25px;
+    }
+
+    .changeLanguageAndMenu {
+        gap: 25px;
+        margin-right: 25px;
+    }
+}
