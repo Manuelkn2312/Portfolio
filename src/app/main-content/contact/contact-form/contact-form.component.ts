@@ -37,10 +37,9 @@ export class ContactFormComponent {
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
+        'Content-Type': 'text/plain'
+      }
+    }
   };
 
 
@@ -71,18 +70,12 @@ export class ContactFormComponent {
    */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
+      this.http.post<any>(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe(response => {
             this.portfolioService.showSentMessagePopUp();
             // optionial code can be added here
             ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
+          }
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       // Perform mail test-specific actions
       ngForm.resetForm();
