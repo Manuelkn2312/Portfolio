@@ -31,16 +31,15 @@ export class ContactFormComponent {
   /** Indicates if a mail test is currently being performed. */
   mailTest = false;
 
-
   /** Configuration for the HTTP POST request. */
   post = {
-    endPoint: 'https://manuel-kn.de/sendMail.php',
+    endPoint: 'https://manuel-kn.de/sendMail.php',  // 'https://deineDomain.de/sendMail.php'
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/plain',
+        responseType: 'text',
       },
-      responseType: 'text' as const,  // Angular interpretiert HTML als Text
     },
   };
 
@@ -71,10 +70,6 @@ export class ContactFormComponent {
    * @param {NgForm} ngForm - The NgForm object representing the form.
    */
   onSubmit(ngForm: NgForm) {
-    this.portfolioService.showSentMessagePopUp();
-    ngForm.resetForm();
-
-    /*
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -92,6 +87,5 @@ export class ContactFormComponent {
       // Perform mail test-specific actions
       ngForm.resetForm();
     }
-      */
   }
 }
