@@ -17,11 +17,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $email = $params->email;
             $name = $params->name;
             $message = $params->message;
-            $privacyPolicy = $params->privacyPolicy;
     
-            $recipient = 'mail@manuel-kn.de';
+            $recipient = 'mail@manuel-kn.de';  
             $subject = "Contact From <$email>";
-            $message = "From:" . $name . "<br>" . $message;
+            $message = "From:" . $name . "<br>" . $message ;
     
             $headers   = array();
             $headers[] = 'MIME-Version: 1.0';
@@ -35,4 +34,4 @@ switch ($_SERVER['REQUEST_METHOD']) {
         default: //Reject any non POST or OPTIONS requests.
             header("Allow: POST", true, 405);
             exit;
-}
+    } 
