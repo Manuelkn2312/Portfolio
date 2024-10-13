@@ -1,7 +1,7 @@
 
 .logoWhite {
     height: 100px;
-    width: 130px;
+    width: 120px;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -107,6 +107,10 @@ footer {
         position: static;
     }
 }
-.logoWhite{
-    display: none;
+@media screen and (max-width: 440px) {
+
+
+    .logoWhite {
+      display: none;
+    }
 }

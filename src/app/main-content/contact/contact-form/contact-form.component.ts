@@ -37,7 +37,7 @@ export class ContactFormComponent {
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'text/plain',
+        'content-type': 'text/plain',
         responseType: 'text',
       },
     },

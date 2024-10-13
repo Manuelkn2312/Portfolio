@@ -42,7 +42,7 @@ export class PortfolioComponent {
       'usedTech': 'JavaScript | HTML | CSS | OOP',
       'description': 'descriptionKey.elPolloLoco',
       'gitHubURL': 'https://github.com/Manuelkn2312/El-Pollo-Loco',
-      'liveTestURL': 'https://manuel-knoell.developerakademie.net/el%20pollo%20loco/'
+      'liveTestURL': 'https://manuel-knoell.developerakademie.net/pollo-loco/'
     }
   ];
 }
