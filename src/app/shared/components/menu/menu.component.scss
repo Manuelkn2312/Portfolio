@@ -1,17 +1,18 @@
 a {
     min-width: 580px;
-    height: 167px;
+    height: 165px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: rgb(32, 29, 29);
     text-decoration: none;
     box-sizing: border-box;
     transition: all ease-in-out 125ms;
 
     &:hover {
-        border: solid 4px black;
-        transition: all ease-in-out 125ms;
+        border-radius: 50px;
+        border: solid 4px #00BC8F;
+        transition: all ease-in-out 120ms;
     }
 }
 
